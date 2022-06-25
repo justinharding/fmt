@@ -148,7 +148,7 @@ if (FMT_MASTER_PROJECT AND NOT DEFINED CMAKE_VISIBILITY_INLINES_HIDDEN)
 endif ()
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-  set(PEDANTIC_COMPILE_FLAGS -pedantic-errors -Wall -Wextra -pedantic
+  set(PEDANTIC_COMPILE_FLAGS -pedantic-errors -Wall -pedantic
       -Wold-style-cast -Wundef
       -Wredundant-decls -Wwrite-strings -Wpointer-arith
       -Wcast-qual -Wformat=2 -Wmissing-include-dirs
@@ -174,7 +174,7 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
 endif ()
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  set(PEDANTIC_COMPILE_FLAGS -Wall -Wextra -pedantic -Wconversion -Wundef
+  set(PEDANTIC_COMPILE_FLAGS -Wall -pedantic -Wconversion -Wundef
       -Wdeprecated -Wweak-vtables -Wshadow
       -Wno-gnu-zero-variadic-macro-arguments)
   check_cxx_compiler_flag(-Wzero-as-null-pointer-constant HAS_NULLPTR_WARNING)
